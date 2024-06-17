@@ -1,0 +1,6 @@
+@DistributeurCafé_HostAddress = http://localhost:5232
+
+GET {{DistributeurCafé_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
