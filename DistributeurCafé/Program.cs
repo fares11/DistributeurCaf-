@@ -1,9 +1,14 @@
+using DistributeurCafé.Config;
 using DistributeurCafé.Interface;
 using DistributeurCafé.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Déterminer le chemin absolu vers le fichier drinks.json
+var drinksJsonPath = Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "drinks.json");
+
+// Charger les données des boissons depuis le fichier JSON
+builder.Configuration.AddJsonFile(drinksJsonPath, optional: false, reloadOnChange: true);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -12,6 +17,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IDistribService, DistribService>();
+builder.Services.Configure<DataConfig>(builder.Configuration);
+
 
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {

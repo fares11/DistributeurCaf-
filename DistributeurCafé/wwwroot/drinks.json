@@ -1,0 +1,18 @@
+{
+    "Ingredients": [
+      { "Name": "Lait en poudre", "PricePerDose": 0.10 },
+      { "Name": "Eau", "PricePerDose": 0.05 },
+      { "Name": "Café", "PricePerDose": 0.30 },
+      { "Name": "Chocolat", "PricePerDose": 0.40 },
+      { "Name": "Thé", "PricePerDose": 0.30 }
+    ],
+    "Drinks": [
+      { "Name": "Espresso", "Ingredients": { "Eau": 2, "Café": 1 } },
+      { "Name": "Lait", "Ingredients": { "Lait en poudre": 2, "Eau": 1 } },
+      { "Name": "Capuccino", "Ingredients": { "Lait en poudre": 2, "Eau": 1, "Café": 1, "Chocolat": 1 } },
+      { "Name": "Chocolat chaud", "Ingredients": { "Chocolat": 3, "Eau": 2 } },
+      { "Name": "Café au lait", "Ingredients": { "Lait en poudre": 1, "Eau": 2, "Café": 1 } },
+      { "Name": "Mokaccino", "Ingredients": { "Lait en poudre": 1, "Eau": 2, "Café": 1, "Chocolat": 2 } },
+      { "Name": "Thé", "Ingredients": { "Eau": 2, "Thé": 1 } }
+    ]
+  }
